@@ -1,0 +1,22 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Home</title>
+    </head>
+</html>
+
+<body>
+    <h1>Campgrounds</h1>
+    <a  href="/new">Create new Campground</a>
+    <ol>
+        <% for (let campground of campgrounds) {%>
+            <li> 
+                <a href="/campgrounds/<%= campground._id %>">
+                    <%=campground.title %> <%=campground.price%> <%=campground.description%> <%=campground.location%> 
+                </a>
+            </li>
+            <% }%>
+    </ol>
+
+</body>
